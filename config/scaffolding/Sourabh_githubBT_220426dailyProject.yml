@@ -8,10 +8,26 @@ packages:
   gitUsername: sourabh-harkawat-0058QC744
   gitBranch: main
 - name: LowerFSPackage
+  version: "4.133"
   gitServerName: srcGithubCtrl_Sourabh_shared
   gitUrl: https://github.com/sourabh-harkawat-0058QC744
   gitUsername: sourabh-harkawat-0058QC744
   gitBranch: main
+services:
+- serviceName: project.sourabh_githubbt_220426daily.integrations:json
+  packages:
+  - name: Sourabh_githubBT_220426dailyProject
+    version: "1.0"
+  - name: LowerFSPackage
+    version: "4.133"
+- serviceName: pub.json:documentToJSON
+  packages:
+  - name: WmPublic
+    version: 12.1.0.0.832
+- serviceName: pub.json:jsonToDocument
+  packages:
+  - name: WmPublic
+    version: 12.1.0.0.832
 configurationVariables:
   jdbc.SAP TxStore Pool.maxConns: "10"
   jdbcfunc.SAPTxStore.failFastMode: false
